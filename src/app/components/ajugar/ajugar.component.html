@@ -1,0 +1,47 @@
+<div class="animated fadeIn fast">
+    <div class="player1">
+        <div class="card-body">
+            <div class="wrapper"> 
+                <div *ngFor= "let c of c1, let i of index"> 
+                    <img src="assets/cartas/otro/Reverso.png">
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="entregadas">
+        <div class="card-body">
+            <div class="wrapper"> 
+                <div> 
+                    <img src="{{img1+cg.nombre+img2}}">
+                </div> 
+                <div> 
+                    <img src="{{ce1}}">
+                </div> 
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="wrapper"> 
+                <div> 
+                    <img src="{{ce2}}">
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="player2">
+        <div class="card-body">
+            <div class="wrapper">
+                <div *ngFor= "let c of c2, let i of index">
+                    <a (click)="clickCard(c)">
+                        <img src="{{img1+c.nombre+img2}}">
+                    </a> 
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-secondary btn-sm" (click)="desidirGanador()">Terminar Partida
+    </button>
+
+</div>

@@ -1,0 +1,57 @@
+<div class="card myperfil">
+    <div class="card-header">
+      Mi perfil
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Bienbenido {{yo.nombre}}</h5>
+      
+      <form   (ngSubmit)="actualizar(form)" 
+                #form = "ngForm"
+                novalidate="">
+
+            <div class="form-group row">
+                <div class="col-md-3 mb-3">
+                    <label>Nombre</label>
+                    <input  type="text" 
+                            [(ngModel)]="yo.nombre" 
+                            name = "nombre"
+                            class="form-control"
+                            placeholder="Nombre"
+                            #nom = "ngModel"
+                            required>
+                </div>  
+                <div class="col-md-3 mb-3">
+                    <label>Password</label>
+                    <input  type="text" 
+                            [(ngModel)]="yo.pass" 
+                            name = "pass"
+                            class="form-control"
+                            placeholder="Alias"
+                            #pas = "ngModel"
+                            required>
+                </div> 
+
+                <div class="col-md-3 mb-3">
+                    <fieldset disabled>
+                        <label>Partidas Jugadas</label>
+                        <input  type="text" 
+                                placeholder="{{pj}}">
+                    </fieldset>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <fieldset disabled>
+                        <label>Partidas Ganadas</label>
+                        <input  type="text" 
+                                placeholder="{{pg}}">
+                    </fieldset>
+                </div>       
+                                 
+            </div>
+
+            <button class="btn btn-primary" type="submit">Actualizar datos</button>
+            
+        </form>         
+
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+wrapper {
+    overflow:hidden;
+    width:auto;
+}
+.wrapper div {
+    /* cualquier altura mayor que el total de sumar la anchura de las img */
+    width:100%;
+
+    /* para evitar el margen superior de la primera fila */
+    margin-top:-10px;
+}
+img {
+    width:113px;
+    height:137px;
+    float:left;
+    margin:0 0 0 0;
+}
+
+.player1{
+    /*margin-bottom: 10%;*/
+    width: 1600px;
+    height: 276px;
+    margin-top: -65px;
+}
+
+.player2{
+    margin-top: 0px;
+    width: 1600px;
+    height: 276px;
+    margin-bottom: 0px;
+}
+
+.entregadas{
+    margin-top: 1px;
+    width: 1600px;
+    height: 138px;
+    margin-left: 38%;
+    margin-bottom: 3%;
+}

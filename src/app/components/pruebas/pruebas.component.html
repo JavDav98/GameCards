@@ -1,0 +1,53 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+      
+    {{texto}}
+    <br/>
+    <br>
+    <br>
+
+    {{texto2}}
+
+    <br/>
+    <div class="card">
+        <div class="card-header">
+        Asignar Partida
+        </div>
+        <div class="card-body">
+            <form   (ngSubmit)="enviarFormulario(form)" 
+                    #form = "ngForm"
+                    novalidate="">
+    
+                <div class="form-group row">
+                    <div class="col-md-3 mb-3">
+                        <label>Nombre</label>
+                        <input  type="text" 
+                                [(ngModel)]="jugador.nombre" 
+                                name = "nombre"
+                                class="form-control"
+                                placeholder="Nombre"
+                                #name = "ngModel"
+                                required>
+                    </div> 
+                    
+                    <div class="col-md-3 mb-3">
+                        <label>Password</label>
+                        <input  type="text" 
+                                [(ngModel)]="jugador.pass" 
+                                name = "pass"
+                                class="form-control"
+                                placeholder="Password"
+                                #pass = "ngModel"
+                                required>
+                    </div>    
+
+                </div>
+    
+                <button class="btn btn-primary" type="submit">Guardar</button>
+                
+            </form>         
+        </div>    
+    </div>
+
+  
+</div>

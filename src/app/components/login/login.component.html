@@ -1,0 +1,65 @@
+<body style="overflow-y:hidden" class="cont">
+<div class="login">
+    <div class="bg">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign In</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form   (ngSubmit)="enviarFormulario(form)" 
+                            #form = "ngForm"
+                            novalidate="">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input  type="text"
+                                    [(ngModel)]="jugador.nombre" 
+                                    name = "nombre"
+                                    class="form-control"
+                                    placeholder="Nombre"
+                                    #nom = "ngModel"
+                                    required>
+                            
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input  type="password"
+                                    [(ngModel)]="jugador.pass" 
+                                    name = "pass"
+                                    class="form-control"
+                                    placeholder="Password"
+                                    #pass = "ngModel"
+                                    required>
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div>
+                        <div class="form-group">
+                            <button  type="submit"
+                                    name = "password"
+                                    class="btn float-right login_btn">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        ¿No tienes cuenta?<a style="color:blue" (click)="open()"> ¡Registrate!</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a (click)="open()">¿No tienes cuenta?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
